@@ -32,7 +32,7 @@ case ${DEVICE} in
         VARIANT=E6653
         ;;
     sumire_dsds)
-        VARIANT=E6683
+        VARIANT=E6653
         ;;
     suzuran)
         VARIANT=E5823
