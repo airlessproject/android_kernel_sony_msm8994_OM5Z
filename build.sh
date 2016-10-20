@@ -60,7 +60,7 @@ export CROSS_COMPILE=aarch64-linux-android-
 echo "Building Sony ${VARIANT} (${DEVICE})"
 make mrproper
 make mm_${DEVICE}_defconfig
-make -j12
+make -j$(grep -c ^processor /proc/cpuinfo)
 
 # Pack ramdisk
 ${BUILD_TOOLS}/mkbootfs ${BUILD_TOOLS}/${RAMDISK_DIR} | gzip -n -f > ${BUILD_TOOLS}/${RAMDISK}
